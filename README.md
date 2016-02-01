@@ -33,7 +33,7 @@ The [dist](https://github.com/brendenpalmer/weakmap/tree/master/dist) folder con
 
 ## Documentation
 
-The built documentation will always be located here: [Documentation](https://github.com/brendenpalmer/weakmap/tree/master/docs);
+The built documentation will always be located here: [Documentation](https://github.com/brendenpalmer/weakmap/tree/master/docs).
 
 ## Contributing
 
