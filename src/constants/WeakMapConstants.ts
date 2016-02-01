@@ -9,7 +9,7 @@
 namespace weakmap {
   /**
    * A class used to expose constants. Intended to
-   * be consumed be whomever requires these.
+   * be consumed by whomever requires these.
    *
    * @class
    */
