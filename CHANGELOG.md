@@ -3,4 +3,4 @@
 
 #### Features
 
-* **WeakMap Polyfill:** A full-featured polyfill for the native implementation of WeakMap. All native operations complete in with an asymptotic time complexity of O(1).
+* **WeakMap Polyfill:** A full-featured polyfill for the native implementation of WeakMap. All native operations complete with an asymptotic time complexity of O(1).
