@@ -12,8 +12,10 @@ import uglify from 'gulp-uglify';
 import iife from 'gulp-iife';
 import ts from 'gulp-typescript';
 import sequence from 'gulp-sequence';
+import header from 'gulp-header';
 import del from 'del';
 import config from '../config.json';
+import packageJson from '../../package.json';
 
 let tsProject = ts.createProject(config.ts.config);
 
@@ -31,9 +33,22 @@ gulp.task('scripts:build', () => {
 });
 
 gulp.task('scripts:concat', () => {
+  let _header = ['/**',
+    ' * <%= pkg.name %> - <%= pkg.description %>',
+    ' *',
+    ' * @author <%= pkg.contributors[0].name %>',
+    ' * @version v<%= pkg.version %>',
+    ' * @license <%= pkg.license %>',
+    ' */',
+    ''
+  ].join('\n');
+
   return gulp.src(config.tmp + '/weakmap.min.js')
     .pipe(iife())
     .pipe(uglify())
+    .pipe(header(_header, {
+      pkg: packageJson
+    }))
     .pipe(gulp.dest(config.dist));
 });
 
