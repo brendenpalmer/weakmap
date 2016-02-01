@@ -1073,7 +1073,38 @@ input[type=checkbox]:checked + .tsd-widget:before { background-position: -160px 
 <div class="container container-main">
 	<div class="content-wrap">
 		<div class="tsd-panel tsd-typography">
-			<h4 id="weakmap-polyfill">WeakMap polyfill</h4>
+			<h1 id="weakmap-polyfill">WeakMap Polyfill</h1>
+			<ul>
+				<li>A minimal WeakMap polyfill written in TypeScript, unit tested using Jasmine and Karma.</li>
+				<li>The polyfill is full featured when comparing to the native implementation of WeakMap. All native operations complete with an asymptotic time complexity of O(1).</li>
+				<li>Built file size is 2 KB minified.</li>
+			</ul>
+			<h2 id="installation">Installation</h2>
+			<p>Ensure that Node and npm are both installed.</p>
+			<p>Then, install gulp globally:</p>
+			<pre><code>npm <span class="hljs-operator"><span class="hljs-keyword">install</span> -<span class="hljs-keyword">g</span> gulp</span>
+</code></pre><p>Finally, install all development dependencies:</p>
+			<pre><code><span class="hljs-built_in">cd</span> CLONED_REPO_DIR
+npm install
+</code></pre><p>Run the default gulp task to run the linter, run unit tests, build documentation, and build the required scripts.</p>
+			<p>Look at the <a href="https://github.com/brendenpalmer/weakmap/tree/master/gulp">gulp</a> folder to view the available tasks to run.</p>
+			<h2 id="usage">Usage</h2>
+			<p>If you&#39;re interested in contributing, see the &quot;Contributing&quot; section below. Otherwise, install this package via npm: weakmap-polyfill.</p>
+			<p>The <a href="https://github.com/brendenpalmer/weakmap/tree/master/dist">dist</a> folder contains all you&#39;ll need to get up and running.</p>
+			<h2 id="documentation">Documentation</h2>
+			<p>The built documentation will always be located here: <a href="https://github.com/brendenpalmer/weakmap/tree/master/docs">Documentation</a>;</p>
+			<h2 id="contributing">Contributing</h2>
+			<ol>
+				<li>Fork it!</li>
+				<li>Create your feature branch: <code>git checkout -b my-new-feature</code></li>
+				<li>Commit your changes: <code>git commit -am &#39;Add some feature&#39;</code></li>
+				<li>Push to the branch: <code>git push origin my-new-feature</code></li>
+				<li>Submit a pull request.</li>
+			</ol>
+			<h2 id="history">History</h2>
+			<p>See the <a href="https://github.com/brendenpalmer/weakmap/blob/master/CHANGELOG.md">CHANGELOG</a>.</p>
+			<h2 id="license">License</h2>
+			<p>Licensed under MIT. See the full license here:  <a href="https://github.com/brendenpalmer/weakmap/blob/master/LICENSE">license</a>.</p>
 		</div>
 		<div style="position:relative;"><a name="typedoc-main-index" class="tsd-anchor"></a></div>
 		<section class="tsd-panel-group tsd-index-group">
