@@ -1,5 +1,5 @@
 {
-  "name": "weakmap-polyfill",
+  "name": "es6-weakmap",
   "version": "0.0.1",
   "description": "A WeakMap polyfill written in TypeScript, unit tested using Jasmine and Karma.",
   "author": "Brenden Palmer <hello@brendenpalmer.com>",

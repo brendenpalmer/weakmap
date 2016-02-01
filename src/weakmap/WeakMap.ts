@@ -21,6 +21,21 @@ namespace weakmap {
     private map: Object = {};
 
     /**
+     * The constructor for a WeakMap
+     *
+     * @param  {Array<Array<*>>} iterable An array of
+     * arrays. The array's elements are key value pairs.
+     * @constructor
+     */
+    constructor(iterable: Array<Array<any>> = []) {
+      for (let keyValue of iterable) {
+        if (keyValue && keyValue.length >= 2) {
+          this.set(keyValue[0], keyValue[1]);
+        }
+      }
+    }
+
+    /**
      * Gets the value tied to a particular
      * object used as the key for the
      * current WeakMap instance

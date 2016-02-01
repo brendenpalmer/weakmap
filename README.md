@@ -27,7 +27,7 @@ Look at the [gulp](https://github.com/brendenpalmer/weakmap/tree/master/gulp) fo
 
 ## Usage
 
-If you're interested in contributing, see the "Contributing" section below. Otherwise, install this package via npm: weakmap-polyfill.
+If you're interested in contributing, see the [Contributing](https://github.com/brendenpalmer/weakmap#contributing) section below. Otherwise, install this package via npm: [es6-weakmap](https://www.npmjs.com/package/es6-weakmap).
 
 The [dist](https://github.com/brendenpalmer/weakmap/tree/master/dist) folder contains all you'll need to get up and running.
 

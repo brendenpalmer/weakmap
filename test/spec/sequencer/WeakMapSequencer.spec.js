@@ -27,7 +27,7 @@ describe('Namespace: weakmap', function() {
     describe('When getting the next value in the sequencer', function() {
       it('should return the correct value', function() {
         for (var i = 0; i < 99; i++) {
-          expect(_instance.next()).toEqual(i);
+          expect(_instance.next()).toEqual(i + 2);
         }
       });
     });

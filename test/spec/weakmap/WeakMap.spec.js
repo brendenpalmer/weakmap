@@ -7,9 +7,15 @@
 
 describe('Namespace: weakmap', function() {
   describe('Class: WeakMap', function() {
+    var _iterableTest1 = {};
+    var _iterableTest2 = {};
+    var _iterable = [
+      [_iterableTest1, '1'],
+      [_iterableTest2, '2']
+    ];
     var _WeakMap = weakmap.WeakMap;
     var _constants = weakmap.WeakMapConstants;
-    var _instance = new _WeakMap();
+    var _instance = new _WeakMap(_iterable);
 
     it('should be defined', function() {
       expect(_WeakMap).toBeDefined();
@@ -17,6 +23,17 @@ describe('Namespace: weakmap', function() {
 
     it('should have defined the instance', function() {
       expect(_instance).toBeDefined();
+    });
+
+    it('should have set the values from _iterable', function() {
+      expect(_instance.get(_iterableTest1)).toEqual('1');
+      expect(_instance.get(_iterableTest2)).toEqual('2');
+    });
+
+    it('should not call .set if no iterable parameter is passed to the constructor', function () {
+      spyOn(_WeakMap.prototype, 'set').and.callThrough();
+      var _instance2 = new _WeakMap();
+      expect(_WeakMap.prototype.set).not.toHaveBeenCalled();
     });
 
     describe('When setting a value', function() {
