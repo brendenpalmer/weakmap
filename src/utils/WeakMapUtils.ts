@@ -24,6 +24,7 @@ namespace weakmap {
      * returns the value of the property that's already
      * set on the object.
      *
+     * @name defineProperty
      * @param {*} object The object
      * @returns {number} The value set
      */
@@ -35,7 +36,7 @@ namespace weakmap {
         throw new TypeError(WeakMapConstants.WEAKMAP_SET_THROWABLE_MESSAGE);
       }
 
-      if (object.hasOwnProperty(WeakMapConstants.WEAKMAP_KEY_IDENTIFIER) === false) {
+      if (typeof object[WeakMapConstants.WEAKMAP_KEY_IDENTIFIER] === 'undefined') {
         _value = WeakMapSequencer.getInstance().next();
 
         try {
@@ -60,6 +61,7 @@ namespace weakmap {
     /**
      * Gets the value tied to an object
      *
+     * @name getProperty
      * @param {*} object The object
      * @returns {number} The unique identifier tied to
      * an object
@@ -75,11 +77,12 @@ namespace weakmap {
     /**
      * Whether or not an object is valid
      *
+     * @name isValidObject
      * @param {*} object The object to check
      * @returns {boolean} Whether or not the object is value
      */
     private static isValidObject(object: any): boolean {
-      return Boolean(object.hasOwnProperty);
+      return object === Object(object);
     }
   }
 }

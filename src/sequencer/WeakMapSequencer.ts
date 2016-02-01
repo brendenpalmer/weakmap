@@ -34,6 +34,7 @@ namespace weakmap {
     /**
      * Gets an instance of WeakMapSequencer
      *
+     * @name getInstance
      * @returns {WeakMapSequencer} The instance
      */
     public static getInstance(): WeakMapSequencer {
@@ -47,6 +48,7 @@ namespace weakmap {
     /**
      * Gets the next number in the sequence
      *
+     * @name next
      * @returns {number} The next number in the sequence
      */
     public next(): number {

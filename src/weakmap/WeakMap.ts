@@ -27,6 +27,7 @@ namespace weakmap {
      *
      * Asymptotic time complexity of O(1)
      *
+     * @name get
      * @param {Object} key The object
      * @returns {*} The value
      */
@@ -45,17 +46,14 @@ namespace weakmap {
      *
      * Asymptotic time complexity of O(1)
      *
+     * @name has
      * @param {Object} The key
      * @returns {boolean} Whether or not the WeakMap
      * has a particular key
      */
     public has(key: Object): boolean {
-      try {
-        let _value: string = String(WeakMapUtils.getProperty(key));
-        return this.map.hasOwnProperty(_value);
-      } catch (e) {
-        return false;
-      }
+      let _value: string = String(WeakMapUtils.getProperty(key));
+      return _value !== void 0 && typeof this.map[_value] !== 'undefined';
     }
 
     /**
@@ -63,6 +61,7 @@ namespace weakmap {
      *
      * Asymptotic time complexity of O(1)
      *
+     * @name delete
      * @param {Object} key The object
      * @returns {boolean} Whether or not the deletion
      * was successful
@@ -82,6 +81,7 @@ namespace weakmap {
      *
      * Asymptotic time complexity of O(1)
      *
+     * @name set
      * @param {Object} key The key
      * @param {*} The value
      */

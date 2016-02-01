@@ -18,6 +18,7 @@ namespace weakmap {
      * Used to get and set values for a particular
      * object
      *
+     * @name WEAKMAP_KEY_IDENTIFIER
      * @returns {string} The unique identifier
      */
     public static get WEAKMAP_KEY_IDENTIFIER(): string {
@@ -28,6 +29,7 @@ namespace weakmap {
      * The message that will be thrown if an invalid
      * key is used as part of the set method
      *
+     * @name WEAKMAP_SET_THROWABLE_MESSAGE
      * @returns {string} The unique identifier
      */
     public static get WEAKMAP_SET_THROWABLE_MESSAGE(): string {

@@ -17,13 +17,19 @@ module.exports = function(config) {
       '.tmp/*.js',
       'test/spec/**/*.js'
     ],
-    reporters: ['progress', 'coverage'],
+    reporters: ['progress', 'coverage', 'threshold'],
     preprocessors: {
       '.tmp/*.js': ['coverage']
     },
     coverageReporter: {
       type: 'html',
       dir: 'test/coverage/'
+    },
+    thresholdReporter: {
+      statements: 100,
+      branches: 80,
+      functions: 100,
+      lines: 100
     }
   });
 };
