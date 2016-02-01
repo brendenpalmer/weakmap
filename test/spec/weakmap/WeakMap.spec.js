@@ -17,5 +17,15 @@ describe('Namespace: weakmap', function() {
     it('should have defined the instance', function() {
       expect(_instance).toBeDefined();
     });
+
+    describe('When setting a value', function () {
+      it('should set, then get the value', function () {
+        var _object = {};
+
+        _instance.set(_object, 'test');
+
+        expect(_instance.get(_object)).toEqual('test');
+      });
+    });
   });
 });

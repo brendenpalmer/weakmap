@@ -18,6 +18,8 @@ namespace weakmap {
      * object used as the key for the
      * current WeakMap instance
      *
+     * This method completes in O(1) time
+     *
      * @param {Object} key The object
      * @returns {*} The value
      */
@@ -33,6 +35,8 @@ namespace weakmap {
     /**
      * Whether or not the current WeakMap has
      * a particular key
+     *
+     * This method completes in O(1) time
      *
      * @param {Object} The key
      * @returns {boolean} Whether or not the WeakMap
@@ -50,6 +54,8 @@ namespace weakmap {
     /**
      * Deletes a key from the current WeakMap
      *
+     * This method completes in O(1) time
+     *
      * @param {Object} key The object
      * @returns {boolean} Whether or not the deletion
      * was successful
@@ -66,6 +72,8 @@ namespace weakmap {
 
     /**
      * Sets a value for a particular key
+     *
+     * This method completes in O(1) time
      *
      * @param {Object} key The key
      * @param {*} The value
