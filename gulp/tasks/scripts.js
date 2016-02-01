@@ -8,6 +8,7 @@
 'use strict';
 
 import gulp from 'gulp';
+import uglify from 'gulp-uglify';
 import iife from 'gulp-iife';
 import ts from 'gulp-typescript';
 import sequence from 'gulp-sequence';
@@ -32,6 +33,7 @@ gulp.task('scripts:build', () => {
 gulp.task('scripts:concat', () => {
   return gulp.src(config.tmp + '/weakmap.min.js')
     .pipe(iife())
+    .pipe(uglify())
     .pipe(gulp.dest(config.dist));
 });
 
