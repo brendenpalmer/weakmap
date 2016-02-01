@@ -10,6 +10,12 @@
  */
 
 namespace weakmap {
+  /**
+   * A utility class intended to be used in conjunction
+   * with the WeakMap class
+   *
+   * @class
+   */
   export class WeakMapUtils {
     /**
      * Defines a unique property that's un-enumerable

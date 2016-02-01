@@ -7,6 +7,12 @@
  */
 
 namespace weakmap {
+  /**
+   * A class used to expose constants. Intended to
+   * be consumed be whomever requires these.
+   *
+   * @class
+   */
   export class WeakMapConstants {
     /**
      * Used to get and set values for a particular

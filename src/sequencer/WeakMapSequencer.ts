@@ -7,6 +7,13 @@
  */
 
 namespace weakmap {
+  /**
+   * Class used to generate a unique sequence of numbers
+   * such that they will never overlap. Used in conjunction
+   * with WeakMapUtils to be used as a unique value / identifier
+   *
+   * @class
+   */
   export class WeakMapSequencer {
     private identifier: number;
     private static instance: WeakMapSequencer = null;
